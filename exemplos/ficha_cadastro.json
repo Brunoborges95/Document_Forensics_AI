@@ -1,0 +1,18 @@
+{
+    "nome": "MARIA DA SILVA SOUZA",
+    "cpf": "123.456.789-09",
+    "nome_mae": "ANA DA SILVA SOUZA",
+    "data_nascimento": "14/01/1990",
+    "razao_social": "EXEMPLO COMERCIO DE ALIMENTOS LTDA",
+    "cnpj": "12.345.678/0001-90",
+    "endereco_empresa": {
+        "cep": "01310-100",
+        "rua": "Avenida Paulista",
+        "numero": "1000",
+        "complemento": "Sala 12",
+        "bairro": "Bela Vista",
+        "cidade": "São Paulo",
+        "estado": "SP"
+    },
+    "nomes_assinatura": ["MARIA DA SILVA SOUZA"]
+}

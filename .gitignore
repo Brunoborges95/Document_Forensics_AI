@@ -1,0 +1,11 @@
+# Credenciais
+.env
+
+# Resultados das execuções (contêm dados dos documentos)
+saida/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/

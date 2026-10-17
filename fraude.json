@@ -1,0 +1,112 @@
+{
+    "instrucoes": {
+        "orquestrador": "",
+        "textual": "",
+        "visual": "",
+        "metadados": ""
+    },
+    "riscos": {
+        "ALTO": {
+            "avaliadores": [
+                "textual",
+                "visual",
+                "metadados"
+            ],
+            "decisao": {
+                "multiplicador": 1.0,
+                "regras": [
+                    {
+                        "criticas": 1
+                    },
+                    {
+                        "moderadas": 2
+                    },
+                    {
+                        "moderadas": 1,
+                        "baixas": 3
+                    }
+                ]
+            },
+            "instrucoes": {
+                "orquestrador": "",
+                "textual": "",
+                "visual": "",
+                "metadados": ""
+            }
+        },
+        "MEDIO": {
+            "avaliadores": [
+                "textual",
+                "visual"
+            ],
+            "decisao": {
+                "multiplicador": 0.5,
+                "regras": [
+                    {
+                        "criticas": 1
+                    },
+                    {
+                        "moderadas": 3
+                    }
+                ]
+            },
+            "instrucoes": {
+                "orquestrador": "FILTRO ABSOLUTO DE MÉDIO RISCO — NUNCA classificar como anomalia: presença de softwares de edição gráfica (Photoshop, Illustrator, GIMP, CorelDRAW, etc.) nos metadados, desde que não haja anomalias textuais ou visuais objetivamente confirmadas.",
+                "textual": "",
+                "visual": "",
+                "metadados": ""
+            }
+        },
+        "BAIXO": {
+            "avaliadores": [
+                "textual"
+            ],
+            "decisao": {
+                "multiplicador": 0.1,
+                "regras": [
+                    {
+                        "criticas": 1
+                    }
+                ]
+            },
+            "instrucoes": {
+                "orquestrador": "FILTRO ABSOLUTO DE BAIXO RISCO — NUNCA classificar como anomalia: presença de softwares de edição gráfica (Photoshop, Illustrator, GIMP, CorelDRAW, etc.) nos metadados, desde que não haja anomalias textuais ou visuais objetivamente confirmadas.",
+                "textual": "",
+                "visual": "",
+                "metadados": ""
+            }
+        },
+        "NULO": {
+            "avaliadores": [],
+            "decisao": {
+                "multiplicador": 0.0,
+                "regras": []
+            },
+            "instrucoes": {
+                "orquestrador": "",
+                "textual": "",
+                "visual": "",
+                "metadados": ""
+            }
+        }
+    },
+    "forense": {
+        "sensibilidade": 8,
+        "validacoes": {
+            "assinatura_integra": "CRÍTICA",
+            "datas_dos_metadados": "MODERADA",
+            "gerado_por_ia": "CRÍTICA",
+            "editado_com_ia": "MODERADA",
+            "programa_de_edicao": "INFORMATIVA",
+            "formato_esperado": "CRÍTICA",
+            "programa_esperado": "CRÍTICA",
+            "assinatura_esperada": "CRÍTICA"
+        }
+    },
+    "identificadores": {
+        "consultas_externas": false,
+        "dominios_pix": [
+            "pix-qrcode.caixa.gov.br"
+        ]
+    }
+}

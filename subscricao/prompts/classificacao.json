@@ -1,0 +1,3 @@
+{
+    "prompt": "Analise cuidadosamente o texto extraído por OCR do documento fornecido e classifique-o em um dos tipos de documento abaixo.\nTipos de documento:\n{tipos}\nInstruções:\n1. Responda com exatamente um dos tipos listados.\n2. O texto pode estar desestruturado e conter erros de OCR. Baseie-se no conteúdo do documento como um todo.\n3. Se o documento não corresponder a nenhum dos tipos listados, responda 'outro'.\n<documento>{document}</documento>\nA resposta deve ser um json com as chaves 'document_type' (o tipo do documento) e 'justificativa' (uma frase curta explicando a escolha)."
+}

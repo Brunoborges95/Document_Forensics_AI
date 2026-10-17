@@ -1,0 +1,14 @@
+[server]
+# A tela processa documentos pessoais e usa a chave da API: por padrão só aceita conexões desta
+# máquina. Para abrir na rede, troque por "0.0.0.0"
+address = "localhost"
+showEmailPrompt = false
+
+# O observador de arquivos do Streamlit trava o servidor por vários segundos depois da primeira
+# conversão, varrendo os milhares de módulos que o docling e o PyTorch importam; o clique seguinte
+# só era atendido depois disso. Desligado, alterações no código pedem reiniciar o Streamlit. Os
+# arquivos de validação são a exceção: a própria tela os recarrega
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

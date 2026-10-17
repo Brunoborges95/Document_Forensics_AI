@@ -1,0 +1,3246 @@
+{
+    "rg": {
+        "descricao": "Registro Geral (RG), a carteira de identidade da República Federativa do Brasil. Contém nome, filiação, data de nascimento, naturalidade, número do registro geral, data de expedição e, em geral, o CPF.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é o Registro Geral (RG), o principal documento de identificação da República Federativa do Brasil.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nGeralmente o CPF está próximo da Assinatura do diretor ou do Registro Geral. Geralmente no início ou no final do texto.\nO nome de filiação do pai sempre vem primeiro que o nome da mãe.\nPodemos utilizar o seguinte exemplo:\n<exemplo>REPUBLICA FEDERATIVA DO BRASIL LEIN 7 116 DE 29 DE AGOSTO DE 1983 With 8268-5 CPF 481296658/24 DNI ESTADO DE SÃO PAULO REGISTRO GERAL 69.021.966-0 1 via DATA DE EXPEDIÇÃO 18/04/2023 SP SECRETARIA DA SEGURANCA PÚBLICA INSTITUTO DE IDENTIFICACAO REGISTRO CIVIL 'RICARDO GUMBLETON DAUNT' ITAPEVA-SP ITAPEVA CN:LV.A199/FLS.275 /N°75872 NOME PEDRO TIENE DE OLIVEIRA FILIACAO SAMIR HERNANI DE OLIVEIRA T. ELEITOR CTPS SÉRIE POLEGAR DIREITO UF NIS/PIS/PASEP DANIELA CRISTINA TIENE DE OLIVEIRA IDENTIDADE PROFISSIONAL DATA NASCIMENTO ORGÃO EXPEDIDOR FATOR RH Noo CERT. MILITAR 14/01/2014 SSP-SP NATURALIDADE CNH CNS ITAPEVA - SP 708503350278979 OBSERVAÇÃO Pedro June.de Alusha Mauricio José Lemos Freire Delegado Divisionário de Policia IIRGD.PCSP 46595753 ASSINATURA DO TITULAR ASSINATURA DO DIRETOR DAYS CARTEIRA DE IDENTIDADE VALIDA EM TODO o TERRITORIO NACIONAL VALID</exemplo>\nNeste caso, o CPF é 481296658/24.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "numero_rg",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Numero do RG"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiacao Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiacao Nome da Mae"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "data_expedicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Expedicao"
+            }
+        ]
+    },
+    "contrato_social": {
+        "descricao": "Contrato Social de uma empresa (constituição, alteração ou consolidação contratual). Contém razão social, CNPJ, sede, objeto social, capital social, quadro de sócios e cláusula de administração, normalmente com registro na Junta Comercial ou em cartório.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é um Contrato Social, um documento jurídico como a certidão de nascimento de uma empresa.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'\nAtentar-se sempre se a assinatura é individual ou em conjunto. Se for em conjunto, precisamos ter duas assinaturas, conforme consta na cláusula de administração, ou seja, assinatura de dois responsáveis.",
+            "visual": "Foque na identificação de assinaturas físicas ou digitais, na presença de registro do órgão competente, na existência do quadro societário, e na autenticação da Junta Comercial (versão digital). Esse registro pode se manifestar como um selo ou carimbo oficial em caso de assinatura física, ou como registros digitais embutidos no próprio documento em caso de assinatura digital.\nEspaços para assinaturas não assinadas não devem ser considerados como assinaturas.\nSe encontrar apenas rubrica, não considere como assinatura.\nRegistro do órgão competente pode ser identificado por carimbos (normalmente marcas arredondadas do cartório) ou selos (adesivos com dados como número de série, data, etc).\nCarimbos e selos podem aparecer em qualquer parte do documento, muitas vezes próximos um do outro.\nNão considere logotipos ou marcas d'água como registro oficial, exceto quando indicarem claramente um carimbo ou selo do cartório.\nAssinaturas físicas ou digitais não substituem a verificação do registro do órgão competente.\nEm documentos digitais, esse registro pode estar embutido no certificado digital e visível no texto.\nProcure também por marca d'água escrita 'SEM VALOR DE CERTIDÃO', que ocupa toda a página.\nQuadro societário presente (Responder com 'True' se houver uma tabela ou listagem com sócios, número de quotas e valor; caso contrário, responder 'False').\nHá um rodapé com um certificado de autenticação digital da junta comercial."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "administrador",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Administrador da empresa (Responder com o nome do administrador da empresa, verificar Cláusula de administração e não incluir títulos como Dr., Dra., etc. como parte do nome)"
+            },
+            {
+                "nome": "socios",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Sócios (Responder com o nome dos sócios, separados por vírgula)"
+            },
+            {
+                "nome": "tipo_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tipo de assinatura (Verificar Cláusula de administração, Responder se a assinatura é 'Individual' ou 'Em conjunto'. Responder 'Em conjunto' somente se isso for obrigatório. Em caso opcional responder 'Individual')"
+            },
+            {
+                "nome": "nomes_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Responsáveis pela assinatura (Responder com o nome dos responsáveis pela assinatura, separados por vírgula)"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da empresa"
+            },
+            {
+                "nome": "cpfs",
+                "tipo": "lista_nome_cpf",
+                "extracao": "textual",
+                "descricao": "CPFs dos sócios"
+            },
+            {
+                "nome": "ha_assinatura",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há pelo menos uma assinatura no documento? (Cuidado, caso encontre um espaço para assinatura, certifique-se de que esse espaço está realmente assinado)"
+            },
+            {
+                "nome": "descricao_assinatura",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da assinatura (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_assinatura",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre a assinatura, de 0 a 100"
+            },
+            {
+                "nome": "ha_registro_orgao_competente",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "O documento possui registro do órgão competente (selo, carimbo oficial ou certificação digital)?"
+            },
+            {
+                "nome": "descricao_registro_orgao_competente",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição detalhada do registro do órgão competente (forneça os elementos visuais encontrados, como número de série, data, cartório, certificado digital, etc.)"
+            },
+            {
+                "nome": "confianca_registro_orgao_competente",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o registro do órgão competente, de 0 a 100"
+            },
+            {
+                "nome": "sem_valor_certidao",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há a marca d'água escrita 'SEM VALOR DE CERTIDÃO' no documento?"
+            },
+            {
+                "nome": "descricao_sem_valor_certidao",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da marca d'água (se aplicável, forneça detalhes sobre localização, cor, opacidade, etc.)"
+            },
+            {
+                "nome": "confianca_sem_valor_certidao",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre a marca d'água, de 0 a 100"
+            },
+            {
+                "nome": "ha_quadro_societario",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Quadro societário presente? (Tabela ou listagem de sócios com número de quotas e valor)"
+            },
+            {
+                "nome": "descricao_quadro_societario",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do quadro societário (se aplicável, forneça detalhes sobre estrutura, sócios identificados, etc.)"
+            },
+            {
+                "nome": "confianca_quadro_societario",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o quadro societário, de 0 a 100"
+            },
+            {
+                "nome": "ha_rodape_autenticacao",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há rodapé de autenticação digital da Junta Comercial?"
+            },
+            {
+                "nome": "descricao_rodape_autenticacao",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do rodapé de autenticação digital (se aplicável, forneça na descrição o número de protocolo, data, hash, e qualquer outro id encontrado.)"
+            },
+            {
+                "nome": "confianca_rodape_autenticacao",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o rodapé de autenticação, de 0 a 100"
+            }
+        ]
+    },
+    "cnh": {
+        "descricao": "Carteira Nacional de Habilitação (CNH), o documento que habilita o portador a conduzir veículo automotor. Contém nome, CPF, número de registro, filiação, data de nascimento e data de validade.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é a Certidão Nacional de Habilitação (CNH). O portador deste documento está apto a conduzir um veículo automotor.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "numero_registro",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de Registro"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "data_validade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Validade"
+            }
+        ]
+    },
+    "comprovante_residencia": {
+        "descricao": "Comprovante de Residência, um documento que confirma o endereço em que a pessoa vive: conta de luz, água, gás, telefone ou internet, IPTU, fatura ou boleto com endereço. Contém nome, endereço, mês de referência, vencimento e data de emissão.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é o Comprovante de Residência, um documento que confirma o endereço em que a pessoa vive.\nO CEP é um número de 8 dígitos que deve ser fornecido no formato XXXXX-XXX.\nA Data de Referência contém o mês e ano de referência e deve ser retornada no formato MM/AAAA.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para Comprovante de Residência (conta de luz, água, gás, telefone, internet, IPTU):\nConcessionárias de serviços públicos: Enel, Cemig, Light, CPFL, Coelba, Equatorial, Energisa, Neoenergia (luz); Sabesp, Copasa, Cagece, Embasa (água); Comgás, CEG (gás); Vivo, Claro, Tim, Oi (telefone/internet); Prefeituras (IPTU). Producers típicos: backend institucional, Adobe PDF Library, iText, Foxit, geradores Java/.NET. Faturas de cartão de crédito (Visa, Mastercard, Elo) e boletos com endereço: aceitáveis com Producer do banco emissor."
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "endereco_pessoal",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço"
+            },
+            {
+                "nome": "data_referencia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Referência"
+            },
+            {
+                "nome": "vencimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Vencimento"
+            },
+            {
+                "nome": "data_emissao_documento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            }
+        ]
+    },
+    "certidao_nascimento": {
+        "descricao": "Certidão de Nascimento, o primeiro documento de validade jurídica de uma pessoa, emitida por cartório de registro civil. Contém nome, filiação, avós, data e município de nascimento, data de registro e número de matrícula.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é a Certidão de Nascimento. É o primeiro documento de validade jurídica de uma pessoa. Serve para comprovar o vínculo\nde um recém-nascido com o proponente.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nCaso o nome do pai não seja identificado, os avós serão obrigatoriamente os avós maternos.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            },
+            {
+                "nome": "avos_maternos",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Avós maternos (deve ser fornecido no formato Nome do avô | Nome da avó)"
+            },
+            {
+                "nome": "avos_paternos",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Avós Paternos (deve ser fornecido no formato Nome do avô | Nome da avó)"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "municipio_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Município de Nascimento (deve incluir o município e a unidade de federação. Exemplo de como deve ser formatado: Salvador - BA)"
+            },
+            {
+                "nome": "data_registro",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Registro"
+            },
+            {
+                "nome": "numero_matricula",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de Matrícula (É um número de 32 dígitos que deve ser fornecido no formato XXXXXX XX XX XXXX X XXXXX XXX XXXXXXX-XX)"
+            }
+        ]
+    },
+    "escritura_uniao_estavel": {
+        "descricao": "Declaração ou Escritura Pública de União Estável, que estabelece legalmente a convivência entre duas pessoas. Contém nome, CPF, nome da mãe e data de nascimento dos dois conviventes.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Declaração de União Estável, escritura que estabelece legalmente a convivência entre duas pessoas, sendo similar ao casamento civil.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.",
+            "visual": "Foque na identificação de selos, carimbos, marcas oficiais e assinaturas digitais que validem a autenticidade do documento.\nPrimeiro, forneça uma descrição geral do documento, incluindo seu tipo, conteúdo principal e aparência geral.\nConsidere todos os tipos de marcas oficiais: selos molhados, selos digitais, carimbos, hologramas, etc.\nVerifique especificamente a presença de assinaturas digitais do gov.br.\nIdentifique separadamente selos (digitais ou não) e carimbos.\nEvite retornar campos vazios no JSON. Se não houver informações para um campo, use 'Não aplicável' ou uma descrição apropriada."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome Primeiro Conjuge"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome Segundo Conjuge"
+            },
+            {
+                "nome": "cpf_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF Primeiro Conjuge"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF Segundo Conjuge"
+            },
+            {
+                "nome": "nome_mae_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Mãe do Primeiro Conjuge"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Mãe do Segundo Conjuge"
+            },
+            {
+                "nome": "data_nascimento_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento do Primeiro Conjuge"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento do Segundo Conjuge"
+            },
+            {
+                "nome": "descricao_geral",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição geral do documento"
+            },
+            {
+                "nome": "assinatura_digital_govbr",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há assinatura digital do gov.br?"
+            },
+            {
+                "nome": "descricao_assinatura_govbr",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da assinatura digital do gov.br (se aplicável)"
+            },
+            {
+                "nome": "ha_selo_carimbo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Selo/Carimbo?"
+            },
+            {
+                "nome": "descricao_selo_carimbo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Selo/Carimbo (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta, de 0 a 100"
+            }
+        ]
+    },
+    "certidao_casamento": {
+        "descricao": "Certidão de Casamento, o registro civil da comunhão entre um casal. Contém nome, CPF, nome da mãe e data de nascimento dos dois cônjuges, data do registro civil e número de matrícula.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Certidão de Casamento, registro que confere uma comunhão entre um casal perante a justiça.\nUse o formato XXX.XXX.XXX-XX para CPF\nO número de Matrícula deve ser fornecido no formato XXXXXX XX XX XXXX X XXXXX XXX XXXXXXX-XX\nEm relações heteroafetivas, o primeiro cônjuge refere-se ao esposo e o segundo cônjuge à esposa. Em relações homoafetivas, o primeiro cônjuge é aquele que aparece primeiro no documento oficial do casamento.",
+            "visual": "Primeiro, forneça uma descrição geral do documento, incluindo seu tipo, conteúdo principal e aparência geral.\nFoque especificamente na identificação de selos, carimbos ou marcas oficiais que validem a autenticidade do documento.\nConsidere todos os tipos de marcas oficiais: selos molhados, selos digitais, carimbos, hologramas, etc.\nEvite retornar campos vazios no JSON. Se não houver informações para um campo, use 'Não aplicável' ou uma descrição apropriada."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do primeiro cônjuge (Use o nome que ele/ela passa a adotar após o casamento, se houver mudança)"
+            },
+            {
+                "nome": "cpf_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do primeiro cônjuge"
+            },
+            {
+                "nome": "data_nascimento_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de nascimento do primeiro cônjuge"
+            },
+            {
+                "nome": "nome_mae_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Mãe do primeiro cônjuge"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do segundo cônjuge (Use o nome que ele/ela passa a adotar após o casamento, se houver mudança)"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do segundo cônjuge"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data da nascimento do segundo cônjuge"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Mãe do segundo cônjuge"
+            },
+            {
+                "nome": "data_registro_civil",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data do registro civil"
+            },
+            {
+                "nome": "numero_matricula",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de Matrícula (É um número de 32 dígitos que deve ser fornecido no formato XXXXXX XX XX XXXX X XXXXX XXX XXXXXXX-XX)"
+            },
+            {
+                "nome": "descricao_geral",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição geral do documento"
+            },
+            {
+                "nome": "ha_selo_carimbo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Selo/Carimbo?"
+            },
+            {
+                "nome": "descricao_selo_carimbo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Selo/Carimbo (Se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta, de 0 a 100"
+            }
+        ]
+    },
+    "ficha_registro": {
+        "descricao": "Ficha de Registro de Empregado, documento em que a empresa registra os dados do funcionário e do contrato de trabalho. Contém razão social e CNPJ da empresa e nome, RG, CPF, PIS, cargo, CBO e data de admissão do funcionário.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Ficha de Registro de um funcionário, documento utilizado pelas empresas para registrar informações sobre o funcionário e sobre o contrato de trabalho.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nA Razão Social de uma empresa é equivalente ao nome da empresa.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": "O documento é a Ficha de Registro de um funcionário (empregado), documento utilizado pelas empresas para registrar informações sobre o funcionário e sobre o contrato de trabalho.\nEncontre o Nome do Funcionário e o Nome da Empresa e considere esses nomes ao analisar a presença da assinatura.\nA assinatura da empresa pode ser efetuada por um representante, uma pessoa da assessoria ou RH da empresa.\nO 'espaço para assinatura' contém os seguintes elementos:\n1. Linha de Assinatura: Uma linha horizontal onde a assinatura manuscrita deve ser inserida.\n2. Nome Completo: Abaixo ou acima da linha de assinatura, o nome completo da pessoa que deve assinar é especificado, para indicar claramente quem é o signatário.\n3. Descreva a assinatura e o espaço da assinatura. Se o nome completo no espaço da assinatura for o mesmo nome encontrado do funcionário, então a assinatura identificada é do funcionário, e não da empresa.\n4. O espaço para assinatura pode ser identificado também com os termos 'Assinatura do funcionário' ou 'Assinatura da empresa'.\nCarimbos isoladamente não devem ser considerados como espaço de assinatura.\nConsidere também como assinaturas as rubricas feitas no local apropriado (espaço para assinatura).\nConsidere assinaturas físicas e digitais ou eletrônicas.\nPara assinaturas digitais, verifique se o email do assinante é similar ao nome da empresa e, em caso positivo, considere como assinatura da empresa.\nCaso não encontre no documento alguma informação de algum dos campos, retorne 'Falso' no campo não encontrado."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social da empresa"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ da empresa"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Funcionário"
+            },
+            {
+                "nome": "endereco_pessoal",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço do Funcionário"
+            },
+            {
+                "nome": "rg",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do RG do Funcionário"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do CPF do Funcionário"
+            },
+            {
+                "nome": "pis",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do PIS do Funcionário"
+            },
+            {
+                "nome": "data_admissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Admissão do Funcionário"
+            },
+            {
+                "nome": "cargo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Cargo do Funcionário"
+            },
+            {
+                "nome": "cbo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CBO"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Mãe do Funcionário"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento do Funcionário"
+            },
+            {
+                "nome": "espaco_assinatura_empresa",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "ha espaco para assinatura da empresa"
+            },
+            {
+                "nome": "espaco_assinatura_funcionario",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há espaço para assinatura do funcionário"
+            },
+            {
+                "nome": "assinatura_funcionario",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há uma assinatura do funcionário"
+            },
+            {
+                "nome": "assinatura_empresa",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há uma assinatura da empresa"
+            },
+            {
+                "nome": "descricao_assinatura_funcionario",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "descrição da assinatura do funcionário"
+            },
+            {
+                "nome": "descricao_assinatura_empresa",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "descrição da assinatura da empresa"
+            }
+        ]
+    },
+    "termo_guarda": {
+        "descricao": "Termo de Guarda (ou Termo de Guarda e Responsabilidade), documento judicial que concede a guarda de um menor, provisória ou definitiva. Contém nome da criança, nome e CPF dos guardiões e data de expedição.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é o Termo de Guarda: Este documento busca regularizar a situação da pessoa que já cuida do menor, mas que não possui sua guarda pela justiça. Nesse caso, o juiz concede a guarda por tempo determinado a uma pessoa, e só depois é substituída pela guarda definitiva.\nUse o formato XXX.XXX.XXX-XX para CPF",
+            "visual": "Foque especificamente na identificação de um logo do tribunal no topo do documento.\nExamine o topo da imagem em busca de um logo ou brasão do tribunal.\nVerifique se há algum símbolo oficial ou emblema que represente o tribunal.\nCertifique-se de fornecer uma resposta clara e definitiva."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome_crianca",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da criança"
+            },
+            {
+                "nome": "nome_primeiro_guardiao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do primeiro guardião"
+            },
+            {
+                "nome": "nome_segundo_guardiao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do segundo guardião"
+            },
+            {
+                "nome": "cpf_primeiro_guardiao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do primeiro guardião"
+            },
+            {
+                "nome": "cpf_segundo_guardiao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do segundo guardião"
+            },
+            {
+                "nome": "data_expedicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Expedição"
+            },
+            {
+                "nome": "is_termo_de_guarda",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "É Termo de Guarda (Responda True ou False. Contém expressões como 'Termo de Guarda e Responsabilidade', 'Termo de Guarda', 'Termo de Responsabilidade', ou similares;)"
+            },
+            {
+                "nome": "is_provisorio",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "É Termo de Guarda Provisório (Responda True ou False. Deve se buscar alguma menção no documento que indiquei que é provisório, caso não tenha nenhuma indicação, considere definitvo)"
+            },
+            {
+                "nome": "ha_logo_tribunal",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há um logo do tribunal no topo do documento?"
+            },
+            {
+                "nome": "descricao_logo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do logo do tribunal (se aplicável)"
+            }
+        ]
+    },
+    "mei": {
+        "descricao": "Certificado da Condição de Microempreendedor Individual (CCMEI). Contém nome empresarial, CNPJ, nome e CPF do empreendedor, situação cadastral, endereço e CNAE.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é o Certificado de Microempresa, um certificado da condição de microempreendedor individual.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": "Foque especificamente na identificação de um brasão das Armas Nacionais do Brasil no canto superior direito do documento.\nExamine o canto superior direito da imagem em busca do brasão.\nVerifique se há o símbolo oficial das Armas Nacionais do Brasil.\nCertifique-se de fornecer uma resposta clara e definitiva.\nApenas responda TRUE se o brasão estiver no canto superior DIREITO."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome Civil"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "situacao_cadastral",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Situação Cadastral"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa"
+            },
+            {
+                "nome": "numero_cnae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNAE"
+            },
+            {
+                "nome": "descricao_cnae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Descrição do CNAE"
+            },
+            {
+                "nome": "data_situacao_cadastral",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data Situação Cadastral"
+            },
+            {
+                "nome": "data_abertura_empresa",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data Abertura Empresa"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            },
+            {
+                "nome": "ha_brasao",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há um brasão das Armas Nacionais do Brasil no canto superior direito do documento?"
+            },
+            {
+                "nome": "descricao_brasao",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do brasão (se aplicável)"
+            }
+        ]
+    },
+    "esocial": {
+        "descricao": "Documento do eSocial (registro ou relação de trabalhadores), que comunica ao governo federal os vínculos empregatícios da empresa. Contém razão social e CNPJ do empregador, nome e CPF do trabalhador, CBO, data de admissão e identificador do evento.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é o E-Social. É um documento que permite que seja comunicado ao governo federal a situação de vínculos empregatícios, contribuições previdenciárias, folhas de pagamento, acidente de trabalho, avisos prévios, escriturações fiscais, além de informações sobre o FGTS.\nUse o formato XXX.XXX.XXX-XX para CPF\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06', e geralmente fica ao lado da razão social",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "PREMISSA SOBRE DOCUMENTOS ELETRÔNICOS: este tipo de documento é gerado por sistema a partir de cadastro único. Toda página puxa os mesmos dados de titular/beneficiário/plano. Portanto, QUALQUER divergência entre páginas em campos identificadores (nome, CPF, matrícula, contrato) é indício direto de montagem ou edição manual.",
+            "textual": "",
+            "visual": "- Verifique cabeçalho oficial, organização de campos, layout institucional.",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para eSocial (Relação de Trabalhadores):\nProducer institucional gov.br. Desde 06/2025: módulo gerencial do portal — JasperReports, iText, ou similar backend. Sistemas de DP (Domínio, Senior, Fortes) também aceitáveis se houver identificação consistente."
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ (deve ser fornecido no formato XX.XXX.XXX/XXXX-XX)"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "cbo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CBO (Classificação Brasileira de Ocupação, deve ser fornecido indicando o número da ocupação - ocupação, exemplo: 142115 - Gerente Financeiro)"
+            },
+            {
+                "nome": "data_admissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Admissão"
+            },
+            {
+                "nome": "identificador_evento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Identificador do Evento (Esse número tem o seguinte formato: IDXXXXXXXXXXXXXXXYYYYMMDDXXX)"
+            },
+            {
+                "nome": "id_contrato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Id do Contrato (Essa informação está no endereço do link, extraia o valor exclusivamente do parâmetro idContrato na URL, se idContrato= não existir na URL, o campo deve ser retornado como 'Not Found')"
+            }
+        ]
+    },
+    "cnpj": {
+        "descricao": "Cartão CNPJ, o Comprovante de Inscrição e de Situação Cadastral da pessoa jurídica emitido pela Receita Federal. Contém número de inscrição, nome empresarial, atividade econômica principal, natureza jurídica, endereço, situação cadastral e data de abertura.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é o Cartão cnpj (No Brasil, o Cadastro Nacional da Pessoa Jurídica é um número único que identifica uma pessoa jurídica junto à Receita Federal brasileira).\nUse o formato XXX.XXX.XXX-XX para CPF\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'\nO número de inscrição CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de inscrição"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome empresarial"
+            },
+            {
+                "nome": "atividade_economica_principal",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Código e descrição da atividade econômica principal"
+            },
+            {
+                "nome": "numero_cnae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do CNAE"
+            },
+            {
+                "nome": "natureza_juridica",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Código é descrição da natureza jurídica"
+            },
+            {
+                "nome": "situacao_cadastral",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Situação cadastral"
+            },
+            {
+                "nome": "data_abertura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de abertura"
+            },
+            {
+                "nome": "data_situacao_cadastral",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data da situação cadastral"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            }
+        ]
+    },
+    "ata_assembleia": {
+        "descricao": "Ata de Eleição ou Ata de Assembleia, que comprova a eleição dos atuais membros da empresa e a posse nos cargos descritos pelo Estatuto Social. Contém razão social, CNPJ, cargos eleitos, data da ata e tempo de mandato.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é a Ata de Eleição ou Ata de Assembleia, um documento que demonstra e comprova a eleição dos atuais membros da Empresa e a posse nos cargos descritos pelo Estatuto Social.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'\nCargos Eleitos refere-se a um dicionário com os cargos e os nomes das pessoas eleitas de cada cargo.\nCPFs refere-se a um dicionário com os nomes das pessoas eleitas e o respectivo CPF.\nA Data da Ata de Eleição refere-se à data em que a Ata foi realizada.\nDepartamentos refere-se a um dicionário com os departamentos (diretoria, secretaria, entre outros) e os cargos de cada departamento presentes no documento.\nUse o formato 'XX anos' ou 'XX meses' para o Tempo de Mandato.",
+            "visual": "Foque na identificação de selos, carimbos, marcas oficiais que validem a autenticidade do documento e nas assinaturas digitais e físicas.\nEspaços para assinaturas não preenchidos não devem ser consideradas como assinaturas.\nSe encontrar apenas rubrica, não considere como assinatura.\nConsidere como carimbo qualquer marca oficial de cartório carimbada no documento. Normalmente é uma marca arredondada do cartório.\nCarimbos podem aparecer em qualquer parte do documento, mas são encontrados com frequência muito próximo do selo oficial.\nCarimbos podem ser apresentados apenas como um círculo com a data e o nome do cartório ou órgão oficial.\nSelo de cartório é um pequeno adesivo com informações específicas do cartório, como número de série, data, e outros dados de autenticação. É colado diretamente no documento para confirmar que o serviço foi prestado e que o documento foi validado pelo cartório.\nSelos e carimbos devem ter uma figura associada e não apenas uma menção no texto.\nAssinaturas não devem ser consideradas como selos oficiais.\nLogotipos de órgãos oficiais não devem ser considerados como selos.\nTermo de autenticidade ou Termo de Autenticação é um termo emitido por algum órgão oficial (Junta Comercial, por exemplo) para certificar a autenticidade do documento.\nTermo de Autenticidade é uma página certificando o registro. A página do documento possui o título 'Termo de Autenticação' ou frase similar. Selos não são Termos de Autenticidade.\nHá um rodapé com um certificado de autenticação digital da junta comercial."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa"
+            },
+            {
+                "nome": "cargos_eleitos",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Cargos Eleitos"
+            },
+            {
+                "nome": "cpfs",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPFs"
+            },
+            {
+                "nome": "departamentos",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Departamentos"
+            },
+            {
+                "nome": "data_ata_eleicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data da Ata de Eleição"
+            },
+            {
+                "nome": "tempo_mandato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tempo de Mandato"
+            },
+            {
+                "nome": "ha_assinatura",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há pelo menos uma assinatura no documento?"
+            },
+            {
+                "nome": "descricao_assinatura",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da assinatura (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_assinatura",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre a assinatura, de 0 a 100"
+            },
+            {
+                "nome": "ha_selo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Selo de cartório no documento?"
+            },
+            {
+                "nome": "descricao_selo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Selo (se aplicável, forneça detalhes como número de série, data, cartório, etc.)"
+            },
+            {
+                "nome": "confianca_selo",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o selo, de 0 a 100"
+            },
+            {
+                "nome": "ha_carimbo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Carimbo de cartório no documento?"
+            },
+            {
+                "nome": "descricao_carimbo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Carimbo (se aplicável, forneça detalhes como formato, data, nome do cartório, etc.)"
+            },
+            {
+                "nome": "confianca_carimbo",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o carimbo, de 0 a 100"
+            },
+            {
+                "nome": "ha_termo_autenticidade",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Termo de Autenticidade no documento?"
+            },
+            {
+                "nome": "descricao_termo_autenticidade",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Termo de Autenticidade (se aplicável, forneça detalhes sobre o órgão emissor, data, número de protocolo, etc.)"
+            },
+            {
+                "nome": "confianca_termo_autenticidade",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o termo de autenticidade, de 0 a 100"
+            },
+            {
+                "nome": "ha_rodape_autenticacao",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há rodapé de autenticação digital da Junta Comercial?"
+            },
+            {
+                "nome": "descricao_rodape_autenticacao",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do rodapé de autenticação digital (se aplicável, forneça na descrição o número de protocolo, data, hash, e qualquer outro id encontrado.)"
+            },
+            {
+                "nome": "confianca_rodape_autenticacao",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o rodapé de autenticação, de 0 a 100"
+            }
+        ]
+    },
+    "estatuto_social": {
+        "descricao": "Estatuto Social, o documento constitutivo da pessoa jurídica (associação, cooperativa, sociedade anônima), que estabelece as regras do seu funcionamento. Contém razão social, CNPJ, sede, cargos que representam a entidade, regras de assinatura e tempo de mandato.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O Documento é o Estatuto Social, um documento constitutivo básico da pessoa jurídica, que estabelece todas as regras para o seu regular funcionamento.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'.\nCargo do Responsável legal refere-se a uma lista com os cargos que podem representar a empresa em juízo ou fora dele. Não são nomes de pessoas, mas cargos. Responsa sempre com os cargos dentro de uma lista, mesmo que seja apenas um item.\nCargo do Responsável Legal sempre será descrito no documento por frase similar a 'representar a companhia em juízo ou fora dele'.\nNão considere a substituição do responsável legal como um Responsável Legal. Por exemplo, vice-presidente que substitui Presidente apenas em situações específicas não deve ser considerado.\nAssinatura isolada ou em conjunto refere-se a uma menção no documento sobre a assinatura do responsável legal ser feita de forma isolada ou em conjunto. Caso não encontre a informação, interprete como assinatura isolada.\nAssinatura em conjunto sempre será descrito no documento frase similar a 'deverá ser obrigatoriamente assinado em conjunto por' seguido da lista de regras.\nConsidere o seguinte exemplo de assinatura em conjunto: 'qualquer ato ou contrato que implique responsabilidade ou obrigação para a companhia deverá ser obrigatoriamente assinado, em conjunto, por: 2 diretores; 1 diretor e 1 procurador.'\nNão considere assinaturas de transações financeiras, como assinaturas de cheques ou movimentação de contas bancárias.\nRegras assinatura em conjunto refere-se a uma lista com os nomes dos cargos de quem deve assinar conjuntamente termos legais.\nUse o formato [['X Cargo','Y Cargo'], [X Cargo]] para Regras assinatura em conjunto, uma lista direta com todas as possibilidades e combinações. Apenas Quantidade e nomes de cargos, sem textos complementares.",
+            "visual": "Foque na identificação de selos, carimbos, marcas oficiais que validem a autenticidade do documento e nas assinaturas digitais e físicas.\nEspaços para assinaturas não preenchidos não devem ser consideradas como assinaturas.\nSe encontrar apenas rubrica, não considere como assinatura.\nConsidere como carimbo qualquer marca oficial de cartório carimbada no documento. Normalmente é uma marca arredondada do cartório.\nCarimbos podem aparecer em qualquer parte do documento, mas são encontrados com frequência muito próximo do selo oficial.\nCarimbos podem ser apresentados apenas como um círculo com a data e o nome do cartório ou órgão oficial.\nSelo de cartório é um pequeno adesivo com informações específicas do cartório, como número de série, data, e outros dados de autenticação. É colado diretamente no documento para confirmar que o serviço foi prestado e que o documento foi validado pelo cartório.\nSelos e carimbos devem ter uma figura associada e não apenas uma menção no texto.\nAssinaturas não devem ser consideradas como selos oficiais.\nLogotipos de órgãos oficiais não devem ser considerados como selos.\nTermo de autenticidade ou Termo de Autenticação é um termo emitido por algum órgão oficial (Junta Comercial, por exemplo) para certificar a autenticidade do documento.\nTermo de Autenticidade é uma página certificando o registro. A página do documento possui o título 'Termo de Autenticação' ou frase similar. Selos não são Termos de Autenticidade.\nHá um rodapé com um certificado de autenticação digital da junta comercial."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa"
+            },
+            {
+                "nome": "cargo_responsavel_legal",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Cargo do Responsável legal"
+            },
+            {
+                "nome": "assinatura_isolada",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Assinatura isolada (True ou False)"
+            },
+            {
+                "nome": "regras_assinatura_conjunto",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Regras assinatura em conjunto"
+            },
+            {
+                "nome": "trecho_regras_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Trecho de texto base para regras assinatura isolada ou conjunto"
+            },
+            {
+                "nome": "tempo_mandato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tempo de Mandato"
+            },
+            {
+                "nome": "ha_assinatura",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há pelo menos uma assinatura no documento?"
+            },
+            {
+                "nome": "descricao_assinatura",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da assinatura (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_assinatura",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre a assinatura, de 0 a 100"
+            },
+            {
+                "nome": "ha_selo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Selo de cartório no documento?"
+            },
+            {
+                "nome": "descricao_selo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Selo (se aplicável, forneça detalhes como número de série, data, cartório, etc.)"
+            },
+            {
+                "nome": "confianca_selo",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o selo, de 0 a 100"
+            },
+            {
+                "nome": "ha_carimbo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Carimbo de cartório no documento?"
+            },
+            {
+                "nome": "descricao_carimbo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Carimbo (se aplicável, forneça detalhes como formato, data, nome do cartório, etc.)"
+            },
+            {
+                "nome": "confianca_carimbo",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o carimbo, de 0 a 100"
+            },
+            {
+                "nome": "ha_termo_autenticidade",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Termo de Autenticidade no documento?"
+            },
+            {
+                "nome": "descricao_termo_autenticidade",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Termo de Autenticidade (se aplicável, forneça detalhes sobre o órgão emissor, data, número de protocolo, etc.)"
+            },
+            {
+                "nome": "confianca_termo_autenticidade",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o termo de autenticidade, de 0 a 100"
+            },
+            {
+                "nome": "ha_rodape_autenticacao",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há rodapé de autenticação digital da Junta Comercial?"
+            },
+            {
+                "nome": "descricao_rodape_autenticacao",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do rodapé de autenticação digital (se aplicável, forneça na descrição o número de protocolo, data, hash, e qualquer outro id encontrado.)"
+            },
+            {
+                "nome": "confianca_rodape_autenticacao",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o rodapé de autenticação, de 0 a 100"
+            }
+        ]
+    },
+    "ctps": {
+        "descricao": "Carteira de Trabalho e Previdência Social (CTPS), física ou digital, que registra a trajetória profissional do trabalhador. Contém nome, CPF e data de nascimento do trabalhador e os contratos de trabalho, com empresa, CNPJ, cargo, CBO e data de admissão.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é a Carteira de Trabalho de um funcionário, documento utilizado pelas empresas para registrar a trajetório profissional do trabalhador.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nProcure as informações apenas no último contrato aberto.\nSe não tiver o CNPJ completo da Empresa, procure a raíz do CNPJ.\nO CNPJ completo é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.\nSe encontrar apenas a raiz do CNPJ da empresa, responda apenas com os dígitos, sem acrescentar nenhum dígito a mais dos encontrados no documento.\nCaso o Documento seja Físico, verifique se ele possui as páginas com os títulos 'assinatura do portador', 'qualificação civil' e 'contrato de trabalho'.\nCaso o Documento seja Digital, verifique se ele está assinado digitalmente pela Dataprev e indique a data em que foi assinado.",
+            "visual": "O documento é a Carteira de Trabalho de um funcionário, documento utilizado pelas empresas para registrar a trajetória profissional do trabalhador.\nCaso o Documento seja Físico, verifique se ele possui as páginas com os títulos similares a 'assinatura do portador', 'qualificação civil' e 'contrato de trabalho'.\nO documento deve ter duas assinaturas:\n1. Assinatura do titular\n2. Assinatura da empresa\nConsidere também como assinaturas as rubricas feitas no local apropriado.\nCaso não encontre no documento alguma informação de algum dos campos, retorne 'Falso' no campo não encontrado.\nResponda todas as perguntas estritamente com os valores: Verdadeiro ou Falso."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para CTPS (Carteira de Trabalho Digital):\nApp oficial gov.br (DATAPREV/MTE). Producer típico: backend Java do app \"Carteira de Trabalho Digital\". PDF gerado via opção \"Enviar/Compartilhar\" no app ou pelo portal servicos.mte.gov.br. Pode aparecer \"iText\", \"Apache PDFBox\" ou similar do DATAPREV. Screenshot do app: aceitável (Android/iOS)."
+        },
+        "arquivo_esperado": {
+            "programas": [
+                "iText",
+                "PDFium",
+                "Skia"
+            ],
+            "assinatura_digital": true,
+            "certificados": [
+                "15e5b3949654d82107b52940c3470064f988fe6a49d1005e161a3f8a7e1e75d9"
+            ]
+        },
+        "campos": [
+            {
+                "nome": "documento_digital",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Documento digital (Verdadeiro ou Falso)"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Mãe"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ da Empresa"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Empresa"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa"
+            },
+            {
+                "nome": "cbo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CBO"
+            },
+            {
+                "nome": "cargo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Cargo"
+            },
+            {
+                "nome": "data_admissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Admissão"
+            },
+            {
+                "nome": "pagina_foto_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Página com Foto e Assinatura (Verdadeiro ou Falso)"
+            },
+            {
+                "nome": "pagina_qualificacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Página com Qualificação (Verdadeiro ou Falso)"
+            },
+            {
+                "nome": "pagina_contrato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Página com Contrato (Verdadeiro ou Falso)"
+            },
+            {
+                "nome": "documento_assinado_digitalmente",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Documento Assinado Digitalmente (Verdadeiro ou Falso)"
+            },
+            {
+                "nome": "data_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data da Assinatura"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            },
+            {
+                "nome": "assinatura_titular",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Assinatura Titular"
+            },
+            {
+                "nome": "assinatura_empresa",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Assinatura Empresa"
+            }
+        ]
+    },
+    "contrato_estagio": {
+        "descricao": "Contrato ou Termo de Compromisso de Estágio, firmado entre o estagiário, a empresa concedente e a instituição de ensino. Contém nome do estagiário, empresa, CNPJ, instituição de ensino e vigência.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é o Contrato de estágio, que tem por objetivo a regulamentação de um vínculo entre contratante e contratado.\nUse o formato XXX.XXX.XXX-XX para CPF\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06', e geralmente fica ao lado da razão social",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do estagiário"
+            },
+            {
+                "nome": "endereco_pessoal",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço do estagiário"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Empresa"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da empresa"
+            },
+            {
+                "nome": "instituicao_ensino",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Instituição de ensino"
+            },
+            {
+                "nome": "vigencia_contrato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Vigência do Contrato"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ da empresa"
+            },
+            {
+                "nome": "espaco_assinatura_instituicao_ensino",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há espaco para assinatura da instituição de ensino"
+            },
+            {
+                "nome": "espaco_assinatura_empresa",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há espaco para assinatura da empresa concedente"
+            },
+            {
+                "nome": "espaco_assinatura_estagiario",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há espaço para assinatura do estagiário"
+            },
+            {
+                "nome": "assinatura_estagiario",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há uma assinatura do estagiário"
+            },
+            {
+                "nome": "assinatura_empresa",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há uma assinatura da empresa concedente"
+            },
+            {
+                "nome": "assinatura_instituicao_ensino",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há uma assinatura da instituição de ensino"
+            }
+        ]
+    },
+    "contrato_prestacao_servico": {
+        "descricao": "Contrato de Prestação de Serviço, que formaliza a contratação de um serviço entre duas empresas, a contratante e a contratada. Contém razão social, CNPJ e endereço das duas partes, data de emissão e vigência.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o Contrato de Prestação de Serviço, um documento que formaliza a relação entre as partes na contratação de um serviço, estabelecendo assim as responsabilidades e os direitos das partes envolvidas.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'.\nA Estipulante é a empresa contratante e Subestipulante é a empresa contratada.\nCaso não encontre o início da vigência do contrato, responda com a Data de emissão do contrato.\nSe a data de vigencia do contrato iniciar no dia da assinatura, considere a data de emissão do contrato\nConsidere apenas o contrato atual. Se tiver um contrato anterior, não considere a vigência do contrato anterior como vigência atual.",
+            "visual": "O documento é o Contrato de Prestação de Serviço, um documento que formaliza a relação entre as partes na contratação de um serviço, estabelecendo assim as responsabilidades e os direitos das partes envolvidas.\nEncontre o Nome da Empresa Contratante e o Nome da Empresa Contratada e considere esses nomes ao analisar a presença da assinatura.\nA assinatura da empresa pode ser efetuada por um representante.\nO 'espaço para assinatura' contém os seguintes elementos:\n1. Linha de Assinatura: Uma linha horizontal onde a assinatura manuscrita deve ser inserida.\n2. Nome Completo: Abaixo ou acima da linha de assinatura, o nome completo da empresa ou representante que deve assinar é especificado, para indicar claramente quem é o signatário.\nConsidere válidas apenas as rubricas que forem feitas no local apropriado: espaço para assinatura.\nConsidere assinaturas físicas (manuscritas) e digitais.\nOs nomes das pessoas devem ser dados como uma lista de nomes das pessoas que assinaram representando cada empresa\nApenas liste os nomes das pessoas que literalmente assinaram o documento. Não considere pessoas responsáveis pela assinatura, mas que não tenha sido identificada a assinatura dessa pessoa.\nSelos e espaços para assinaturas não devem ser considerados como assinaturas. Apenas a assinatura em si."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social_matriz",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social Estipulante"
+            },
+            {
+                "nome": "cnpj_matriz",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ Estipulante"
+            },
+            {
+                "nome": "endereco_empresa_matriz",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa Estipulante"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social Subestipulante"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ Subestipulante"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa Subestipulante"
+            },
+            {
+                "nome": "tempo_contrato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tempo de Contrato"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de emissão do contrato"
+            },
+            {
+                "nome": "inicio_vigencia_contrato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Início da vigência do contrato"
+            },
+            {
+                "nome": "ha_assinatura_empresa_contratante",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há assinatura da empresa contratante (True ou False)"
+            },
+            {
+                "nome": "ha_assinatura_empresa_contratada",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "há assinatura da empresa contratada (True ou False)"
+            },
+            {
+                "nome": "descricao_assinaturas",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "descrição das assinaturas extraídas"
+            },
+            {
+                "nome": "fisica_ou_digital",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "assinatura física ou digital"
+            },
+            {
+                "nome": "nome_assinatura_empresa_contratante",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "nome de quem assinou pela empresa contratante"
+            },
+            {
+                "nome": "nome_assinatura_empresa_contratada",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "nome de quem assinou pela empresa contratada"
+            }
+        ]
+    },
+    "carta_permanencia": {
+        "descricao": "Carta de Permanência (declaração de permanência) emitida por operadora de plano de saúde, que atesta o tempo em que os beneficiários permaneceram no plano, para compra ou redução de carência. Contém operadora, empresa contratante, plano, acomodação e os beneficiários com as datas de inclusão e exclusão.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é a Carta de Permanência, um comprovante que atesta que o beneficiário cumpriu o tempo mínimo necessário para ter a compra ou redução de carência no plano.\nBeneficiários é um array com todos os beneficiários composto pelos seguintes campos:nome_beneficiario//segmentacao (No caso do Bradesco, algumas documentos listam as coberturas, retorne todas elas no campo de segmentação como string e separados por vírgula) //numero_cartao_plano//data_nascimento//data_inclusao_plano//data_exclusao_plano//titular_ou_dependente.\nData de exclusão do plano pode ser uma data ou 'Ativo' ou 'Até a presenta data'.\nNome da empresa refere-se a razão social da empresa contratante do plano de saúde.\nNome da congênere refere-se ao nome da empresa que oferece o plano de saúde.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "PREMISSA SOBRE DOCUMENTOS ELETRÔNICOS: este tipo de documento é gerado por sistema a partir de cadastro único. Toda página puxa os mesmos dados de titular/beneficiário/plano. Portanto, QUALQUER divergência entre páginas em campos identificadores (nome, CPF, matrícula, contrato) é indício direto de montagem ou edição manual.",
+            "textual": "",
+            "visual": "- Verifique cabeçalho oficial, organização de campos, layout institucional.",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para Carta de Permanência (Unimed, Bradesco Saúde, SulAmérica, Amil, Hapvida, NotreDame, Porto Seguro):\nBibliotecas backend: iText, ReportLab, Apache FOP, JasperReports, wkhtmltopdf, TCPDF, PDFreactor, Crystal Reports. Conversores institucionais: Adobe PDF Library, Foxit Reader/PDF SDK."
+        },
+        "arquivo_esperado": {
+            "formatos": [
+                "pdf_digital"
+            ]
+        },
+        "campos": [
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de emissão do documento"
+            },
+            {
+                "nome": "beneficiarios",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Beneficiários"
+            },
+            {
+                "nome": "regulamentacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Regulamentação (True ou False)"
+            },
+            {
+                "nome": "descricao_regulamentacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Descrição da regulamentação (desacreva o porquê caso retorne True para o campo Regulamentação, em caso contrário retornar Not Found)"
+            },
+            {
+                "nome": "acomodacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Acomodação"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da empresa"
+            },
+            {
+                "nome": "nome_congenere",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da congênere"
+            },
+            {
+                "nome": "plano",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Plano utilizado"
+            },
+            {
+                "nome": "numero_protocolo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de Protocolo"
+            },
+            {
+                "nome": "abrangencia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Abrangência geográfica (responda 'Nacional' ou 'Regional'. Caso seja um grupo de municípios específico, a abrangência é 'Regional')"
+            }
+        ]
+    },
+    "gfip_novo": {
+        "descricao": "Relação de Trabalhadores do FGTS (detalhe da guia emitida, do FGTS Digital ou da GFIP), que lista os trabalhadores cobertos por uma guia do FGTS. Contém empregador, CNPJ, número e total da guia, competência de apuração, vencimento, quantidade de trabalhadores e a tabela com matrícula, CPF, nome e categoria de cada trabalhador.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é a Relação de Trabalhadores do FGTS, o detalhe de uma guia do FGTS com os trabalhadores que ela cobre.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "PREMISSA SOBRE DOCUMENTOS ELETRÔNICOS: este tipo de documento é gerado por sistema a partir de cadastro único. Toda página puxa os mesmos dados de titular/beneficiário/plano. Portanto, QUALQUER divergência entre páginas em campos identificadores (nome, CPF, matrícula, contrato) é indício direto de montagem ou edição manual.",
+            "textual": "",
+            "visual": "- Verifique tabela estruturada, linhas/colunas visíveis, cabeçalhos.",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para Guia FGTS / FGTS Digital:\nProducer institucional CAIXA/gov.br. Para FGTS Digital (2024+): gerador backend Java/.NET. Legados: \"SEFIP\", \"Conectividade Social\"."
+        },
+        "campos": [
+            {
+                "nome": "data_vencimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Vencimento da Guia"
+            },
+            {
+                "nome": "numero_vidas",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Qtd. Trabalhadores"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Emitido em"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Empregador (CNPJ do empregador)"
+            },
+            {
+                "nome": "identificador",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número da Guia"
+            },
+            {
+                "nome": "total_guia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Total da Guia"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome Empregador"
+            },
+            {
+                "nome": "competencia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Comp. Apuração (competência de apuração da guia)"
+            },
+            {
+                "nome": "trabalhadores_collection",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Trabalhadores (lista com uma entrada por linha da tabela de trabalhadores, com as colunas da tabela: Estabelecimento, Matrícula, CPF, Nome Trabalhador, Categoria e Comp. Apuração)"
+            }
+        ]
+    },
+    "cartao_plano": {
+        "descricao": "Cartão (carteirinha) de plano de saúde, a identificação do beneficiário junto a médicos, clínicas, laboratórios e hospitais. Pode ser o cartão físico, um PDF ou a tela do aplicativo da operadora. Contém nome do beneficiário, número do cartão, operadora, plano, acomodação e validade.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é o Cartão de Plano, a identificação do usuário frente aos médicos, centros clínicos, laboratórios, hospitais, dentre outros estabelecimentos que buscar atendimento.\nNome da empresa refere-se à razão social da empresa contratante do plano de saúde.\nNome da congênere refere-se ao nome da empresa que oferece o plano de saúde.\nEm alguns documentos, o nome do titular é seguido dos dígitos 00 para identificar que é o titular.\nPara o número do cartão, considere que o extrator de OCR pode confundir o número zero inicial com a letra o. Para estes casos, substitua a letra o pelo número 0.\nO número do cartão deve ser extraído de forma integral, mesmo que haja zeros à esquerda.\nNo número do cartão plano pode haver um último dígito verificador no final. Este deve ser extraído e retornado ao final do campo de saída sem espaços caso exista.\nUm exemplo considerando as três orientações acima: se o número do cartão extraído for 'o 865 000435716200 4', o sistema deve retornar '08650004357162004'.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "PREMISSA SOBRE DOCUMENTOS ELETRÔNICOS: este tipo de documento é gerado por sistema a partir de cadastro único. Toda página puxa os mesmos dados de titular/beneficiário/plano. Portanto, QUALQUER divergência entre páginas em campos identificadores (nome, CPF, matrícula, contrato) é indício direto de montagem ou edição manual.",
+            "textual": "",
+            "visual": "CONTEXTO — VARIAÇÃO LEGÍTIMA DE FORMATOS:\nCarteirinhas chegam em formatos muito variados, e isso é normal:\n\nFormato A — PDF institucional multipágina (ex: SulAmérica):\n  Página 1 é capa decorativa (logo + elementos gráficos da operadora).\n  Página 2 contém os dados do beneficiário em layout vertical de campos\n  (nome, nascimento, plano, código, cobertura). Sem cartão visual; é\n  documento de identificação textual.\n  Aparência minimalista é ESPERADA, não amador.\n\nFormato B — Imagem de cartão renderizado em app (ex: Bradesco, Unimed):\n  Cartão colorido (vermelho Bradesco, verde Unimed, etc.) ocupando porção\n  central da página, fundo branco ao redor. Cores vibrantes por design.\n  Geralmente vem como screenshot do app oficial — pode ter barra de status\n  do celular no topo (hora, bateria, sinal) ou botões do app\n  (\"Gerar token\", \"Meu Cartão Saúde\"). Esses elementos NÃO são suspeitos.\n\nFormato C — Cartão físico fotografado ou escaneado:\n  Cartão real do plano fotografado contra superfície, ou digitalizado.\n  Pode ter sombra, ângulo levemente torto, recorte aproximado.\n  Layout segue o cartão padrão da operadora.\n\nFormato D — Cartão extraído (recortado do app/PDF):\n  Cartão sem o contexto do app/celular ao redor. Aparece sobre fundo\n  branco puro. Aceitável se claramente recortado de fonte oficial.\n\nREGRAS DE AVALIAÇÃO VISUAL:\n\n- \"Layout amador/desorganizado\" significa: campos sobrepostos, fontes\n  visivelmente misturadas em campos do MESMO tipo, alinhamentos quebrados\n  em vários pontos, qualidade de impressão claramente inferior à esperada\n  para cartão oficial. NÃO confundir com:\n    - Variação de cores entre operadoras (vermelho/verde/azul são por design)\n    - Capas decorativas minimalistas (Formato A)\n    - Elementos do app no entorno (Formato B)\n    - Cartão fotografado torto ou com sombra leve (Formato C)\n\n- Logo e tipografia da operadora devem ser fiéis ao padrão conhecido.\n\n- Verificar coerência: número do cartão, validade no formato esperado\n  (geralmente MM/AA), dados do beneficiário consistentes.\n\nREGRAS DE DECISÃO:\n\n- Layout amador/desorganizado conforme definição acima → SUSPEITO\n  (mesmo com relatório técnico BAIXO).\n- Capa decorativa minimalista (Formato A pg1) ISOLADAMENTE → não é sinal.\n  Considerar conjunto com a página de dados.\n\nREGRA ESPECIAL — CAPA DECORATIVA:\nPara carteirinha Formato A (multipágina com capa decorativa):\n- Flags na página de capa devem ser CONSIDERADAS COM CAUTELA — capas decorativas\n  têm elementos gráficos (ondas, gradientes) que se repetem e podem disparar o\n  relatório técnico legitimamente.\n- A decisão final deve priorizar sinais da página de DADOS do beneficiário,\n  não da capa.\n- Capa com flag isolada + página de dados limpa → tendência a LEGÍTIMO.",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para Carteirinha de Plano:\nPDF/imagem do app oficial ou backend. Foxit, Adobe PDF Library, geradores Java. Screenshots de app (Android/iOS): aceitáveis."
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Beneficiário"
+            },
+            {
+                "nome": "nome_titular",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Titular"
+            },
+            {
+                "nome": "acomodacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Acomodação"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da empresa"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento do Titular"
+            },
+            {
+                "nome": "numero_cartao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do cartão"
+            },
+            {
+                "nome": "data_validade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Validade"
+            },
+            {
+                "nome": "nome_congenere",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da congênere"
+            },
+            {
+                "nome": "segmentacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Segmentação"
+            },
+            {
+                "nome": "abrangencia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Abrangência geográfica"
+            },
+            {
+                "nome": "plano",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Plano utilizado"
+            }
+        ]
+    },
+    "gfd": {
+        "descricao": "Guia do FGTS Digital (GFD), a guia de recolhimento do FGTS gerada pelo empregador, com QR Code para pagamento por Pix. Contém CNPJ e razão social do empregador, competência, quantidade de trabalhadores, valor a recolher, vencimento e identificador da guia.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é a Guia do FGTS Digital (GFD), a guia de recolhimento do FGTS gerada pelo empregador.\nO Valor a recolher sempre será um valor numérico no formato padrão brasileiro. Um valor inteiro, seguido de vírgula e a parte decimal. Exemplo: 3223,00. Utilize sempre esse formato.\nO Identificador é sempre um número seguido de um hífen e um dígito no final. Sempre números, nunca letras. Corrija possíveis erros de OCR.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para GFD (Guia FGTS Digital rescisória/mensal):\nProducer SERPRO/MTE/gov.br — sistema FGTS Digital (fgtsdigital.sistema.gov.br). Backend Java/.NET com QR Code Pix integrado. Pode aparecer \"iText\", \"Apache FOP\", ou identificação SERPRO. Para competências legadas (anteriores a 03/2024): \"SEFIP\", \"Conectividade Social ICP V2\", \"GRRF\". Sistemas de DP (Domínio, Senior, Fortes, TOTVS): aceitáveis se identificação consistente."
+        },
+        "arquivo_esperado": {
+            "programas": [
+                "iText",
+                "JasperReports",
+                "Print To PDF",
+                "PDFium",
+                "Skia",
+                "Ghostscript",
+                "QuickReports",
+                "Bullzip"
+            ]
+        },
+        "campos": [
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão social"
+            },
+            {
+                "nome": "quantidade_trabalhadores",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Quantidade de trabalhadores"
+            },
+            {
+                "nome": "valor_recolhimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Valor a recolher"
+            },
+            {
+                "nome": "data_vencimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de vencimento"
+            },
+            {
+                "nome": "competencia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Competência"
+            },
+            {
+                "nome": "data_geracao_guia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data geração da guia"
+            },
+            {
+                "nome": "identificador",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Identificador"
+            },
+            {
+                "nome": "tag",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tag"
+            }
+        ]
+    },
+    "comprovante_pagamento_gfd": {
+        "descricao": "Comprovante de Pagamento da Guia do FGTS Digital (GFD), em geral um comprovante de Pix emitido pelo banco do empregador. Contém pagador, CNPJ, destinatário, valor, data de pagamento e ID da transação.",
+        "risco": "ALTO",
+        "instrucoes": {
+            "textual": "O documento é o Comprovante de Pagamento da GFD, um documento que comprova o pagamento do FGTS do trabalhador pela empresa.\nConsidere também o cnpj do pagador para o campo cnpj do devedor\nO valor do pagamento deve ser retornado exatamente no formato que aparece no documento\nConsidere o nome e cnpj do pagador como nome/cnpj do pagador ou devedor\nO ID da transação tem 32 caracteres, não confundir com identificação do QR Code",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": "PRODUCERS/CREATORS ESPERADOS para Comprovante de Pagamento GFD/FGTS:\nComprovante de Pix gerado pelo app/internet banking do banco do empregador (Banco do Brasil, Itaú, Bradesco, Santander, Caixa, Nubank, Inter, etc.). Producer típico: backend do banco ou conversores institucionais (Adobe PDF Library, iText). Para guias antigas pré-FGTS Digital: comprovante bancário tradicional ou autenticação mecânica do banco. Screenshots de app bancário: aceitáveis."
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do pagador"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ do devedor"
+            },
+            {
+                "nome": "destinatario",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Destinatário"
+            },
+            {
+                "nome": "valor_recolhimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Valor"
+            },
+            {
+                "nome": "data_vencimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de vencimento"
+            },
+            {
+                "nome": "data_pagamento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de pagamento"
+            },
+            {
+                "nome": "id_transacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "ID da Transação"
+            }
+        ]
+    },
+    "nota_fiscal": {
+        "descricao": "Nota Fiscal de serviço, o documento fiscal da atividade prestada por uma empresa a outra empresa ou a uma pessoa. Contém razão social, CNPJ e endereço do prestador e do tomador do serviço, valor e data de emissão.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Nota Fiscal (é um documento fiscal que tem por finalidade a atividade comercial prestada por uma empresa a uma pessoa física ou outra empresa).\nUse o formato XXX.XXX.XXX-XX para CPF\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'\nO número de inscrição CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social_matriz",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social do Tomador de Serviço"
+            },
+            {
+                "nome": "cnpj_matriz",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ do Tomador de Serviço"
+            },
+            {
+                "nome": "endereco_empresa_matriz",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço do Tomador de Serviço"
+            },
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social do Prestador de Serviço"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ do Prestador de Serviço"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço do Prestador de Serviço"
+            },
+            {
+                "nome": "valor",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Valor Total Líquido"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            }
+        ]
+    },
+    "procuracao": {
+        "descricao": "Procuração, o instrumento de mandato pelo qual alguém concede poderes a outra pessoa por um prazo definido. Contém o outorgante (razão social e CNPJ), os procuradores com CPF, os poderes concedidos e a validade.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Procuração (É um instrumento de mandato, por meio do qual alguém concede poderes a outrem, por um prazo ou período pré-definido).\nUse o formato XXX.XXX.XXX-XX para CPF\nA Razão Social é o nome jurídico da empresa em que o empregador trabalha, exemplo: 'SANTA MARIA TRANSPORTES LTDA', 'NEURODF APOIO ADMINISTRATIVO LTDA'\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.\nDeve constar na procuração, mais precisamente na lista de poderes uma frase igual ou com similaridade a 'Assinar contratos', indicando que o procurador pode assinar contratos. Caso não encontre, retornar False no campo 'Lista de Poderes'.\nPara a validade, deve-se encontrara data de início e fim de contrato. Muitas vezes o documento indica a validade a partir de um período, exemplo: '12 meses a partir da data de assinatura'. Nesse, caso deve-se calcular a data final adicionando 12 meses à data de início.Caso o documento não especifique uma data final ou período de validade explícito, traga somente a data de início.",
+            "visual": "Foque na identificação de selos, carimbos, marcas oficiais que validem a autenticidade do documento e nas assinaturas digitais e físicas.\nEspaços para assinaturas não assinadas não devem ser consideradas como assinaturas.\nSe encontrar apenas rubrica, não considere como assinatura.\nConsidere como carimbo qualquer marca oficial de um cartório carimbada no documento.\nCarimbos podem aparecer em qualquer parte do documento, mas são encontrados com frequência no final ou nas margens.\nSelo oficial é uma marca de autenticação do cartório, geralmente contendo informações como número de protocolo, data de registro, etc.\nSelos e carimbos devem ter uma figura associada e não apenas uma menção no texto.\nAssinaturas não devem ser consideradas como selos oficiais.\nLogotipos de órgãos oficiais não devem ser considerados como selos.\nAssinaturas podem ser físicas ou digitais.\nCaso não encontre assinatura física, selos ou carimbos, verifique se há um termo de autenticação digital."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "procuradores",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Lista de Procuradores (retornar os nomes separados por vírgula)"
+            },
+            {
+                "nome": "cpfs_procuradores",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Lista de CPF dos Procuradores (retornar os CPFs separados por vírgula)"
+            },
+            {
+                "nome": "lista_poderes",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Lista de Poderes (retornar True ou False caso permita assinar contratos)"
+            },
+            {
+                "nome": "descricao_poderes",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Descrição para assinar contratos (breve descrição explicando a razão dos procuradores terem poder para assinar ou não contratos)"
+            },
+            {
+                "nome": "validade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Validade (Retornar no formato 'Data de início, Data de fim')"
+            },
+            {
+                "nome": "cpf_responsavel",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "ha_assinatura",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há pelo menos uma assinatura no documento? (Cuidado, caso encontre um espaço para assinatura, certifique-se de que esse espaço está realmente assinado)"
+            },
+            {
+                "nome": "descricao_assinatura",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da assinatura (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_assinatura",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre a assinatura, de 0 a 100"
+            },
+            {
+                "nome": "ha_selo_carimbo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Selo/Carimbo do cartório?"
+            },
+            {
+                "nome": "descricao_selo_carimbo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Selo/Carimbo (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_selo_carimbo",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o selo/carimbo, de 0 a 100"
+            }
+        ]
+    },
+    "requerimento_empresario": {
+        "descricao": "Requerimento de Empresário, o documento de constituição do Empresário Individual registrado na Junta Comercial. Contém nome empresarial, CNPJ, nome e CPF do empresário, endereço e data de assinatura.",
+        "risco": "BAIXO",
+        "instrucoes": {
+            "textual": "O documento é o Requerimento de Empresário (documento de constituição do Empresário Individual, natureza jurídica disponível para empresários sem sócios).\nUse o formato XXX.XXX.XXX-XX para CPF\nA Razão Social é o nome empresarial do Empresário Individual, geralmente contendo o nome completo do empresário\nO número de inscrição CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": "Foque na identificação de selos, carimbos, marcas oficiais que validem a autenticidade do documento e nas assinaturas digitais e físicas.\nEspaços para assinaturas não assinadas não devem ser consideradas como assinaturas.\nSe encontrar apenas rubrica, não considere como assinatura.\nConsidere como carimbo qualquer marca oficial da Junta Comercial carimbada no documento.\nCarimbos podem aparecer em qualquer parte do documento, mas são encontrados com frequência no final ou nas margens.\nSelo oficial é uma marca de autenticação da Junta Comercial, geralmente contendo informações como número de protocolo, data de registro, etc.\nSelos e carimbos devem ter uma figura associada e não apenas uma menção no texto.\nAssinaturas não devem ser consideradas como selos oficiais.\nLogotipos de órgãos oficiais não devem ser considerados como selos.\nAssinaturas podem ser físicas ou digitais.\nHá um rodapé com um certificado de autenticação digital da junta comercial."
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Razão Social"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "nome_empresario",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Empresário"
+            },
+            {
+                "nome": "endereco_empresa",
+                "tipo": "endereco",
+                "extracao": "textual",
+                "descricao": "Endereço da Empresa"
+            },
+            {
+                "nome": "data_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Assinatura"
+            },
+            {
+                "nome": "cpf_empresario",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do Empresário"
+            },
+            {
+                "nome": "ha_assinatura",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há pelo menos uma assinatura no documento? (Cuidado, caso encontre um espaço para assinatura, certifique-se de que esse espaço está realmente assinado)"
+            },
+            {
+                "nome": "descricao_assinatura",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição da assinatura (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_assinatura",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre a assinatura, de 0 a 100"
+            },
+            {
+                "nome": "ha_selo_carimbo",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há Selo/Carimbo da Junta Comercial?"
+            },
+            {
+                "nome": "descricao_selo_carimbo",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do Selo/Carimbo (se aplicável, forneça detalhes que validem a autenticidade do documento)"
+            },
+            {
+                "nome": "confianca_selo_carimbo",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o selo/carimbo, de 0 a 100"
+            },
+            {
+                "nome": "ha_rodape_autenticacao",
+                "tipo": "booleano",
+                "extracao": "visual",
+                "descricao": "Há rodapé de autenticação digital da Junta Comercial?"
+            },
+            {
+                "nome": "descricao_rodape_autenticacao",
+                "tipo": "texto",
+                "extracao": "visual",
+                "descricao": "Descrição do rodapé de autenticação digital (se aplicável, forneça na descrição o número de protocolo, data, hash, e qualquer outro id encontrado.)"
+            },
+            {
+                "nome": "confianca_rodape_autenticacao",
+                "tipo": "inteiro",
+                "extracao": "visual",
+                "descricao": "Confiança na resposta sobre o rodapé de autenticação, de 0 a 100"
+            }
+        ]
+    },
+    "carta_nao_adesao": {
+        "descricao": "Carta de Não Adesão do Sócio, em que o sócio da empresa declara que recusa aderir ao plano de saúde coletivo. Pode ser digital ou manuscrita. Contém o nome do declarante.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Carta de Não Adesão do Sócio, documento em que o sócio da empresa expressa a recusa em aderir ao plano.\nO documento pode ser digital ou redigido a mão",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "FILTRO DE CONTEXTO ESPECÍFICO (CARTA NÃO ADESÃO):\n- NÃO classifique como contradição o fato de o declarante recusar o plano coletivo por já possuir um plano ativo (individual, familiar ou de outra empresa) na própria Seguros Unimed ou em outra operadora.\n- Este é o comportamento esperado e o objetivo principal deste documento.",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            }
+        ]
+    },
+    "carteira_identidade_profissional": {
+        "descricao": "Carteira de Identidade Profissional, a identidade emitida por conselho ou ordem de classe (OAB, CRM, CREA, CRO, CRC, COREN, CRP, CAU e outros), válida como documento de identidade em todo o território nacional. Contém nome, conselho emissor e UF, número de inscrição no conselho, categoria profissional, CPF, RG, filiação, data de nascimento e data de expedição.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Carteira de Identidade Profissional, emitida por conselho ou ordem de classe e válida como documento de identidade.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO número de inscrição é o registro do profissional no conselho (por exemplo, o número da OAB ou do CRM). Não é o RG nem o CPF.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "numero_rg",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do RG"
+            },
+            {
+                "nome": "conselho",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Conselho ou ordem que emitiu a carteira, com a UF (exemplos: OAB/SP, CRM-RJ, CREA-MG)"
+            },
+            {
+                "nome": "numero_inscricao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de inscrição ou de registro no conselho"
+            },
+            {
+                "nome": "categoria",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Profissão, categoria ou título inscrito (exemplos: Advogado, Médico, Engenheiro Civil)"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "data_expedicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Expedição"
+            },
+            {
+                "nome": "data_validade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Validade"
+            }
+        ]
+    },
+    "passaporte": {
+        "descricao": "Passaporte, o documento de viagem emitido pela Polícia Federal (ou pelo país de origem, no caso de estrangeiro). A página de identificação contém foto, nome, número do passaporte, nacionalidade, data de nascimento, filiação, data de expedição, data de validade e, na parte de baixo, duas linhas de leitura automática preenchidas com o caractere '<'.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o Passaporte. Use a página de identificação, que traz a foto do titular.\nO nome deve ser fornecido na ordem natural: os nomes seguidos dos sobrenomes.\nAs duas linhas de leitura automática, na parte de baixo da página, repetem nome, número e datas e servem para conferir a leitura.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome completo do titular"
+            },
+            {
+                "nome": "numero_passaporte",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do passaporte"
+            },
+            {
+                "nome": "pais_emissor",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "País emissor do passaporte"
+            },
+            {
+                "nome": "nacionalidade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nacionalidade"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            },
+            {
+                "nome": "data_expedicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Expedição"
+            },
+            {
+                "nome": "data_validade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Validade"
+            }
+        ]
+    },
+    "crnm": {
+        "descricao": "Carteira de Registro Nacional Migratório (CRNM), antigo Registro Nacional de Estrangeiro (RNE ou CIE), a identidade do estrangeiro residente no Brasil, emitida pela Polícia Federal. Contém nome, número do registro (RNM), nacionalidade, data de nascimento, filiação, classificação, prazo de residência, data de expedição e data de validade.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Carteira de Registro Nacional Migratório (CRNM), a identidade do estrangeiro residente no Brasil.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO número do registro é o RNM (ou RNE, nas carteiras antigas), em geral uma letra seguida de dígitos.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "numero_registro",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do RNM (ou RNE)"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "nacionalidade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nacionalidade"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            },
+            {
+                "nome": "classificacao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Classificação (por exemplo, Residente ou Temporário)"
+            },
+            {
+                "nome": "data_expedicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Expedição"
+            },
+            {
+                "nome": "data_validade",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Validade"
+            }
+        ]
+    },
+    "comprovante_cpf": {
+        "descricao": "Comprovante de Inscrição no CPF ou Comprovante de Situação Cadastral no CPF, emitido pela Receita Federal, ou o cartão CPF. Contém número do CPF, nome, data de nascimento, situação cadastral, data da inscrição e, no comprovante emitido pela internet, data e hora da emissão e código de controle.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o comprovante do Cadastro de Pessoas Físicas (CPF), emitido pela Receita Federal.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "situacao_cadastral",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Situação Cadastral"
+            },
+            {
+                "nome": "data_inscricao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data da inscrição no CPF"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data e hora de emissão do comprovante"
+            },
+            {
+                "nome": "codigo_controle",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Código de controle do comprovante"
+            }
+        ]
+    },
+    "cartao_sus": {
+        "descricao": "Cartão Nacional de Saúde (CNS), o cartão do SUS, que identifica o usuário do Sistema Único de Saúde. Pode ser o cartão físico, um PDF ou a tela do aplicativo Meu SUS Digital. Contém nome, número do cartão com 15 dígitos, data de nascimento, sexo e, em alguns modelos, nome da mãe. Não é o cartão de plano de saúde de uma operadora.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o Cartão Nacional de Saúde (CNS), o cartão do SUS.\nO número do cartão tem 15 dígitos e deve ser fornecido só com os dígitos, sem espaços.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome"
+            },
+            {
+                "nome": "numero_cns",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do Cartão Nacional de Saúde (15 dígitos)"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "sexo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Sexo"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            }
+        ]
+    },
+    "holerite": {
+        "descricao": "Holerite, contracheque ou demonstrativo de pagamento de salário, que a empresa entrega ao empregado a cada mês. Contém razão social e CNPJ do empregador, nome, cargo e data de admissão do empregado, mês de referência e a relação de vencimentos e descontos, com salário base, totais e valor líquido.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o holerite (contracheque), o demonstrativo mensal de pagamento de salário de um empregado.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.\nOs valores devem ser fornecidos como estão no documento, com vírgula nos centavos.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Empresa"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Funcionário"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "cargo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Cargo do Funcionário"
+            },
+            {
+                "nome": "data_admissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Admissão do Funcionário"
+            },
+            {
+                "nome": "competencia",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Mês de referência do pagamento (MM/AAAA)"
+            },
+            {
+                "nome": "salario_base",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Salário base"
+            },
+            {
+                "nome": "total_vencimentos",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Total de vencimentos"
+            },
+            {
+                "nome": "total_descontos",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Total de descontos"
+            },
+            {
+                "nome": "valor_liquido",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Valor líquido a receber"
+            }
+        ]
+    },
+    "contrato_trabalho": {
+        "descricao": "Contrato Individual de Trabalho (incluindo o contrato de experiência), firmado entre a empresa e o empregado com vínculo CLT. Contém razão social e CNPJ do empregador, nome e CPF do empregado, cargo, salário, jornada, data de admissão e as assinaturas das partes. Não é contrato de prestação de serviço entre empresas nem termo de estágio.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o Contrato Individual de Trabalho, firmado entre a empresa e o empregado.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Empresa"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Funcionário"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "cargo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Cargo do Funcionário"
+            },
+            {
+                "nome": "data_admissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Admissão do Funcionário"
+            },
+            {
+                "nome": "salario",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Salário contratual"
+            },
+            {
+                "nome": "tipo_contrato",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tipo do contrato (experiência, prazo determinado ou prazo indeterminado)"
+            },
+            {
+                "nome": "data_assinatura",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Assinatura"
+            }
+        ]
+    },
+    "termo_rescisao": {
+        "descricao": "Termo de Rescisão do Contrato de Trabalho (TRCT), ou o Termo de Quitação ou de Homologação que o acompanha, que formaliza o desligamento do empregado. Contém razão social e CNPJ do empregador, nome, CPF e PIS do trabalhador, data de admissão, data de afastamento, causa do afastamento e as verbas rescisórias, com o valor líquido.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o Termo de Rescisão do Contrato de Trabalho (TRCT), que formaliza o desligamento de um empregado.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "razao_social",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome da Empresa"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ"
+            },
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do Funcionário"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "pis",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do PIS do Funcionário"
+            },
+            {
+                "nome": "data_admissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Admissão do Funcionário"
+            },
+            {
+                "nome": "data_aviso_previo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data do aviso prévio"
+            },
+            {
+                "nome": "data_afastamento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de afastamento"
+            },
+            {
+                "nome": "causa_afastamento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Causa do afastamento ou tipo de rescisão (por exemplo, despedida sem justa causa, pedido de demissão)"
+            },
+            {
+                "nome": "valor_liquido",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Valor rescisório líquido"
+            }
+        ]
+    },
+    "carta_concessao_inss": {
+        "descricao": "Carta de Concessão de benefício do INSS, ou a Declaração de Benefício emitida pelo Meu INSS, que comprova a aposentadoria ou a pensão. Contém nome e CPF do beneficiário, número do benefício (NB), espécie do benefício, data de início (DIB), renda mensal e data de emissão.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Carta de Concessão ou a Declaração de Benefício do INSS, que comprova a aposentadoria ou a pensão.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do beneficiário"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "numero_beneficio",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do benefício (NB)"
+            },
+            {
+                "nome": "especie_beneficio",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Espécie do benefício, com o código quando houver (por exemplo, 42 - Aposentadoria por tempo de contribuição)"
+            },
+            {
+                "nome": "data_inicio_beneficio",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de início do benefício (DIB)"
+            },
+            {
+                "nome": "situacao_beneficio",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Situação do benefício (por exemplo, ativo ou cessado)"
+            },
+            {
+                "nome": "renda_mensal",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Renda mensal do benefício"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            }
+        ]
+    },
+    "comprovante_matricula": {
+        "descricao": "Declaração ou comprovante de matrícula emitido por escola, faculdade ou universidade, que atesta que o aluno está matriculado em determinado período letivo. Contém instituição de ensino, nome do aluno, curso, período ou semestre, situação da matrícula e data de emissão. Não é contrato de estágio nem histórico escolar.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a declaração ou o comprovante de matrícula de um aluno em instituição de ensino.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO CNPJ é um campo no formato XX.XXX.XXX/XXXX-XX, podendo ser um valor com apenas números, exemplo: '44.406.419/0001-13', ou alfanumérico, exemplo: 'V5.AW1.W1J/0001-06'.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do aluno"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "instituicao_ensino",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Instituição de ensino"
+            },
+            {
+                "nome": "cnpj",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CNPJ da instituição de ensino"
+            },
+            {
+                "nome": "curso",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Curso ou série"
+            },
+            {
+                "nome": "periodo_letivo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Período letivo a que a matrícula se refere (ano ou semestre, por exemplo 2026/2)"
+            },
+            {
+                "nome": "registro_academico",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de matrícula ou registro acadêmico (RA) do aluno"
+            },
+            {
+                "nome": "situacao_matricula",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Situação da matrícula (por exemplo, matriculado, cursando ou trancado)"
+            },
+            {
+                "nome": "data_emissao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Emissão"
+            }
+        ]
+    },
+    "declaracao_imposto_renda": {
+        "descricao": "Declaração de Ajuste Anual do Imposto de Renda da Pessoa Física (DIRPF) ou o seu Recibo de Entrega, emitidos pelo programa da Receita Federal, usados para comprovar dependentes. Contém nome e CPF do declarante, exercício e ano-calendário, número do recibo e, na declaração completa, a relação de dependentes com nome, CPF e relação de dependência.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Declaração do Imposto de Renda da Pessoa Física ou o seu Recibo de Entrega.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.\nO exercício é o ano em que a declaração foi entregue; o ano-calendário é o ano anterior, a que os rendimentos se referem.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do declarante"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do declarante"
+            },
+            {
+                "nome": "exercicio",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Exercício da declaração"
+            },
+            {
+                "nome": "ano_calendario",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Ano-calendário"
+            },
+            {
+                "nome": "numero_recibo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do recibo de entrega"
+            },
+            {
+                "nome": "dependentes",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Dependentes declarados, separados por ponto e vírgula, cada um no formato Nome | CPF | relação de dependência"
+            },
+            {
+                "nome": "data_entrega",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data e hora de entrega da declaração"
+            }
+        ]
+    },
+    "certidao_obito": {
+        "descricao": "Certidão de Óbito, o registro civil do falecimento de uma pessoa, emitida por cartório de registro civil. Contém nome do falecido, filiação, estado civil, data e município do falecimento, declarante, data do registro e número de matrícula.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é a Certidão de Óbito, o registro civil do falecimento de uma pessoa.\nO CPF é um número de 11 dígitos que deve ser fornecido no formato XXX.XXX.XXX-XX.",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do falecido"
+            },
+            {
+                "nome": "cpf",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF"
+            },
+            {
+                "nome": "nome_pai",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome do Pai"
+            },
+            {
+                "nome": "nome_mae",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Filiação Nome da Mãe"
+            },
+            {
+                "nome": "data_nascimento",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Nascimento"
+            },
+            {
+                "nome": "data_obito",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data do falecimento"
+            },
+            {
+                "nome": "municipio_obito",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Município do falecimento (deve incluir o município e a unidade de federação. Exemplo de como deve ser formatado: Salvador - BA)"
+            },
+            {
+                "nome": "estado_civil",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Estado civil"
+            },
+            {
+                "nome": "nome_conjuge",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do cônjuge ou companheiro, quando constar"
+            },
+            {
+                "nome": "data_registro",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Registro"
+            },
+            {
+                "nome": "numero_matricula",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número de Matrícula (É um número de 32 dígitos que deve ser fornecido no formato XXXXXX XX XX XXXX X XXXXX XXX XXXXXXX-XX)"
+            }
+        ]
+    },
+    "termo_tutela_curatela": {
+        "descricao": "Termo de Tutela ou Termo de Curatela (provisória ou definitiva), documento judicial que nomeia o tutor de um menor ou o curador de uma pessoa incapaz. Contém nome do tutelado ou curatelado, nome e CPF do tutor ou curador, número do processo, vara e data de expedição. Não é termo de guarda.",
+        "risco": "MEDIO",
+        "instrucoes": {
+            "textual": "O documento é o Termo de Tutela ou de Curatela, em que o juiz nomeia o responsável por um menor ou por uma pessoa incapaz.\nUse o formato XXX.XXX.XXX-XX para CPF",
+            "visual": ""
+        },
+        "instrucoes_fraude": {
+            "orquestrador": "",
+            "textual": "",
+            "visual": "",
+            "metadados": ""
+        },
+        "campos": [
+            {
+                "nome": "nome_tutelado",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do tutelado ou curatelado"
+            },
+            {
+                "nome": "nome_responsavel",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Nome do tutor ou curador"
+            },
+            {
+                "nome": "cpf_responsavel",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "CPF do tutor ou curador"
+            },
+            {
+                "nome": "tipo_termo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Tipo do termo: tutela ou curatela"
+            },
+            {
+                "nome": "provisorio_ou_definitivo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "O termo é provisório ou definitivo?"
+            },
+            {
+                "nome": "numero_processo",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Número do processo"
+            },
+            {
+                "nome": "data_expedicao",
+                "tipo": "texto",
+                "extracao": "textual",
+                "descricao": "Data de Expedição"
+            }
+        ]
+    }
+}

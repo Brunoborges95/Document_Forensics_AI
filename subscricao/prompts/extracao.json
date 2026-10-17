@@ -1,0 +1,8 @@
+{
+    "textual": {
+        "prompt": "Analise cuidadosamente o texto extraído por OCR do documento fornecido.\nSeja direto e conciso nas respostas.\nUse o formato DD-MM-YYYY para datas.\nResponda 'Not Found' se a informação não estiver disponível.\nO texto pode estar desestruturado. Corrija erros de formatação e ortografia no texto extraído, se necessário.\n{instrucoes}\n<documento>{document}</documento>\nExtraia as informações do documento seguindo esta estrutura. A descrição de cada campo indica o que deve ser respondido:\n<estrutura>{estrutura}</estrutura>"
+    },
+    "visual": {
+        "prompt": "Analise cuidadosamente a imagem fornecida do documento oficial e o texto extraído por OCR.\nExamine sistematicamente cada seção da imagem, incluindo cantos e margens.\nVerifique duas vezes para garantir que nenhum detalhe seja negligenciado.\nBaseie sua análise tanto na imagem visual quanto no texto extraído por OCR.\nCertifique-se de que todos os campos estejam preenchidos, e se alguma informação estiver ausente, forneça uma indicação adequada. Não deixe nenhum campo vazio ou nulo.\n{instrucoes}\n<documento>{document}</documento>\nExtraia as informações do documento seguindo esta estrutura. A descrição de cada campo indica o que deve ser respondido:\n<estrutura>{estrutura}</estrutura>"
+    }
+}
